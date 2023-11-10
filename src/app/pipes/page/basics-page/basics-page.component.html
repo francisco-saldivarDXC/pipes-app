@@ -1,0 +1,32 @@
+<p-panel header="Basic pipes">
+  <div class="grid">
+    <p-card class="col-12 md:col-4 ">
+      <p style="font-weight: bold;" class="">Uppercase</p>
+      <p>Original: {{ lowerCase }}</p>
+      <p>With pipe: {{  lowerCase | uppercase }}</p>
+    </p-card>
+    <p-card class="col-12 md:col-4 ">
+      <p style="font-weight: bold;" class="">Lowercase</p>
+      <p>Original: {{ upperCase }}</p>
+      <p>With pipe: {{  upperCase | lowercase }}</p>
+    </p-card>
+    <p-card class="col-12 md:col-4 ">
+      <p style="font-weight: bold;" class="">Titlecase</p>
+      <p>Original: {{ titleCase }}</p>
+      <p>With pipe: {{  titleCase | titlecase }}</p>
+    </p-card>
+    <!-- ------------------------  Date  ---------------------------------- -->
+    <p-card class="col-12 md:col-6 ">
+      <p style="font-weight: bold;" class="">Date sin pipe</p>
+      <p>Original with short: {{ actualDate }}</p>
+    </p-card>
+    <p-card class="col-12 md:col-6 ">
+      <p style="font-weight: bold;" class="">Date con pipe</p>
+      <p>With short: {{ actualDate | date: 'short' }}</p>
+      <p>With long: {{ actualDate | date: 'long' }}</p>
+      <p>With w (Week number): {{ actualDate | date: 'w' }}</p>
+      <p>With L (Month number): {{ actualDate | date: 'L' }}</p>
+      <p>With fullTime (Full time): {{ actualDate | date: 'fullTime' }}</p>
+    </p-card>
+  </div>
+</p-panel>

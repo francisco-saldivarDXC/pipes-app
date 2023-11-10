@@ -1,0 +1,17 @@
+<p-panel header="Numeric pipes">
+  <p>Pipes numericos</p>
+  <div class="grid">
+    <p-card class="col-12 md:col-4" header="Ventas brutas" subheader="del presente año">
+      <!-- De dos a tres decimales -->
+      <p>{{ bigNumber * 1.235 | number : "1.2-4" }}</p>
+    </p-card>
+    <p-card class="col-12 md:col-4" header="Ventas netas" subheader="del presente año">
+      <!-- De dos a tres decimales -->
+      <p>{{ bigNumber | currency : 'MXN' : 'symbol-narrow' : '1.4-4'}}</p>
+    </p-card>
+    <p-card class="col-12 md:col-4" header="Ganancia porcentual" subheader="del presente año">
+      <!-- De dos a tres decimales -->
+      <p>{{ percent | percent : '1.2-3' }}</p>
+    </p-card>
+  </div>
+</p-panel>
